@@ -1,21 +1,17 @@
-use alx_book_store;
-
--- task_2.sql
--- Create tables in alx_book_store
 
 USE alx_book_store;
 
 -- AUTHORS TABLE
 CREATE TABLE IF NOT EXISTS Authors (
     author_id INT AUTO_INCREMENT PRIMARY KEY,
-    author_name VARCHAR(255) NOT NULL,
+    author_name VARCHAR(215) NOT NULL,
     bio TEXT
 );
 
 -- BOOKS TABLE
 CREATE TABLE IF NOT EXISTS Books (
     book_id INT AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
+    title VARCHAR(215) NOT NULL,
     author_id INT,
     price DECIMAL(10,2),
     published_year INT,
@@ -25,8 +21,8 @@ CREATE TABLE IF NOT EXISTS Books (
 -- CUSTOMERS TABLE
 CREATE TABLE IF NOT EXISTS Customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY,
-    customer_name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) UNIQUE,
+    customer_name VARCHAR(215) NOT NULL,
+    email VARCHAR(215) UNIQUE,
     phone VARCHAR(20),
     address TEXT
 );
